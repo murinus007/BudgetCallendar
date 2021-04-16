@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/vanilla-calendar-min.css">
+    <script src="src/js/vanilla-calendar-min.js"></script>
+</head>
+<body>
+  
+    <div class="maincontent">
+        <div class="left">
+            <h1>Budget Tracker App</h1>
+            <div class="content">
+                <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+            </div>
+        </div>
+        <div class="right">
+            <h2>ElifTech</h2>
+            <div class="inputs">
+                <input type="text" placeholder="Spent Amount ($)" class="comoninput" id="amountInput">
+                <input type="text" placeholder="Category" class="comoninput" id="categoryInput">
+                <button id="enterButton">Create Entry</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Day spendings:</h2>
+    </div>
+    <div>
+        <ul></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
