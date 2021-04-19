@@ -41,9 +41,6 @@ function getSpendings() {
         let spendingDate = new Date(spending.date);
         let calendarDate = new Date(currentDate);
         let today = new Date();
-
-        console.log(isNaN(calendarDate.getTime()));
-        console.log(today.sameDay(spendingDate));
         if (
           calendarDate.sameDay(spendingDate) ||
           (isNaN(calendarDate.getTime()) && today.sameDay(spendingDate))
@@ -228,6 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
       })
       .then((data) => {
+        if (data.message == "Auth successful"){
         token = data.token;
         userId = data.userId;
         document.getElementById('name').innerHTML = data.name;
@@ -235,6 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementsByClassName("loginPage")[0].style.display = "none";
         document.getElementsByClassName("firstPage")[0].style.display = "block";
         getSpendings();
+        }
       })
       .catch((error) => {
         console.log(error);
